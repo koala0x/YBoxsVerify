@@ -19,7 +19,7 @@
             android:layout_marginTop="100dp"
             app:box_bum="5"
             app:box_height="40dp"
-            app:box_input_type="text"
+            app:box_input_type="number"
             app:box_margin="5dp"
             app:box_pwd_dot_size="large"
             app:box_pwd_model="false"
