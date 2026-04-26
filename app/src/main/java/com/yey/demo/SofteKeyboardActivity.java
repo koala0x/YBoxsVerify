@@ -1,5 +1,6 @@
 package com.yey.demo;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
@@ -38,43 +39,21 @@ public class SofteKeyboardActivity extends AppCompatActivity implements View.OnC
         mDataBinding.keyBoard.containerDelete.setOnClickListener(this);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.keypad0:
-                inputNumber(0);
-                break;
-            case R.id.keypad1:
-                inputNumber(1);
-                break;
-            case R.id.keypad2:
-                inputNumber(2);
-                break;
-            case R.id.keypad3:
-                inputNumber(3);
-                break;
-            case R.id.keypad4:
-                inputNumber(4);
-                break;
-            case R.id.keypad5:
-                inputNumber(5);
-                break;
-            case R.id.keypad6:
-                inputNumber(6);
-                break;
-            case R.id.keypad7:
-                inputNumber(7);
-                break;
-            case R.id.keypad8:
-                inputNumber(8);
-                break;
-            case R.id.keypad9:
-                inputNumber(9);
-                break;
-            case R.id.container_delete:
-                deleteNumber();
-                break;
-        }
+        int id = v.getId();
+        if (id == R.id.keypad0) inputNumber(0);
+        else if (id == R.id.keypad1) inputNumber(1);
+        else if (id == R.id.keypad2) inputNumber(2);
+        else if (id == R.id.keypad3) inputNumber(3);
+        else if (id == R.id.keypad4) inputNumber(4);
+        else if (id == R.id.keypad5) inputNumber(5);
+        else if (id == R.id.keypad6) inputNumber(6);
+        else if (id == R.id.keypad7) inputNumber(7);
+        else if (id == R.id.keypad8) inputNumber(8);
+        else if (id == R.id.keypad9) inputNumber(9);
+        else if (id == R.id.container_delete) deleteNumber();
     }
 
     /**

@@ -1,19 +1,28 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 36
     buildToolsVersion "29.0.2"
+    namespace "com.yey.demo"
     defaultConfig {
-        applicationId "com.yey.demo"
-        minSdkVersion 19
-        targetSdkVersion 29
+        applicationId "com.yey.btc"
+        minSdkVersion 21
+        targetSdkVersion 36
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    dataBinding {
-        enabled = true
+
+    buildFeatures {
+        buildConfig true  // 加这一行
+        dataBinding true
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -26,8 +35,5 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation project(path: ':vcodevy_library')
 }

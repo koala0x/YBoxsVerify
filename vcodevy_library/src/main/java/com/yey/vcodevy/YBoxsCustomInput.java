@@ -164,9 +164,9 @@ public class YBoxsCustomInput extends LinearLayout {
      * @param mContent
      */
     public void inputContent(String mContent) {
-        if (BuildConfig.DEBUG) {
-            Log.d(TAG, mContent);
-        }
+//        if (BuildConfig.DEBUG) {
+//            Log.d(TAG, mContent);
+//        }
         if (!TextUtils.isEmpty(mContent) && mInputIndex >= 0 && mInputIndex < mBoxNum && !mInputComplete) {
             //1.当EditText中有输入时,将该输入取出展示到mInputIndex对应的textview中
             //将当前的textview 置为not focus

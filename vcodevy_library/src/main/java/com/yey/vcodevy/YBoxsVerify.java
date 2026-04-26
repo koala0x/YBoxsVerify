@@ -211,9 +211,9 @@ public class YBoxsVerify extends FrameLayout {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                if (BuildConfig.DEBUG) {
-                    Log.d(TAG, editable.toString());
-                }
+//                if (BuildConfig.DEBUG) {
+//                    Log.d(TAG, editable.toString());
+//                }
                 if (!TextUtils.isEmpty(editable) && mInputIndex >= 0 && mInputIndex < mBoxNum && !mInputComplete) {
                     //1.当EditText中有输入时,将该输入取出展示到mInputIndex对应的textview中
                     //将当前的textview 置为not focus
